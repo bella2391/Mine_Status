@@ -6,9 +6,6 @@ import mysql.connector
 
 load_dotenv('.env')
 
-API_KEY = os.getenv('API_KEY')
-DB_PASSWORD = os.getenv('DB_PASSWORD')
-
 while True:
    conn = None
    try:
