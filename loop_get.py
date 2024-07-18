@@ -4,7 +4,7 @@ import datetime
 import minestat
 import mysql.connector
 
-load_dotenv('')
+load_dotenv('~/.env')
 
 while True:
    conn = None
