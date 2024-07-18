@@ -4,7 +4,7 @@ import discord
 from discord.ext import tasks
 import mysql.connector
 from discord import app_commands
-load_dotenv('.env')
+load_dotenv('C://Users/maeka/PHP/.env')
 
 TOKEN=os.getenv("DISCORD_TOKEN")
 intents = discord.Intents.default()
@@ -35,14 +35,19 @@ async def myLoop():
       playernums_str = ""
       columns_list = []
       servers = []
-      servers.append(dict(name="Velocity",port=os.getenv("Velocity_SERVER_PORT")))
+      servers.append(dict(name="Bungeecord",port=os.getenv("Bungeecord_SERVER_PORT")))
+      #servers.append(dict(name="Velocity",port=os.getenv("Velocity_SERVER_PORT")))
       servers.append(dict(name="Home",port=os.getenv("Home_SERVER_PORT")))
       servers.append(dict(name="Latest",port=os.getenv("Latest_SERVER_PORT")))
+      servers.append(dict(name="La_Test",port=os.getenv("La_Test_SERVER_PORT")))
       servers.append(dict(name="RLCraft",port=os.getenv("RLCraft_SERVER_PORT")))
       servers.append(dict(name="Gun",port=os.getenv("Gun_SERVER_PORT")))
       servers.append(dict(name="Multi_Isekai",port=os.getenv("Multi_Isekai_SERVER_PORT")))
       servers.append(dict(name="DungeonF",port=os.getenv("DungeonF_SERVER_PORT")))
-
+      servers.append(dict(name="Vanilla",port=os.getenv("Vanilla_SERVER_PORT")))
+      servers.append(dict(name="La_Test2",port=os.getenv("La_Test2_SERVER_PORT")))
+      servers.append(dict(name="HardCore",port=os.getenv("HardCore_SERVER_PORT")))
+      
       i=0
       while i<len(servers):
         servers_str += f"{servers[i]["name"]},"
@@ -53,15 +58,15 @@ async def myLoop():
       servers_str = servers_str[:-1]
       players_str = players_str[:-1]
       playernums_str = playernums_str[:-1]
-      stmt=f"SELECT {servers_str} FROM mine_status;"
+      stmt=f"SELECT {servers_str} FROM mine_status WHERE id={1};"
       cursor.execute(stmt)
       onoffs = cursor.fetchall()
       conn.commit()
-      stmt=f"SELECT {players_str} FROM mine_status;"
+      stmt=f"SELECT {players_str} FROM mine_status WHERE id={1};"
       cursor.execute(stmt)
       players = cursor.fetchall()
       conn.commit()
-      stmt=f"SELECT {playernums_str} FROM mine_status;"
+      stmt=f"SELECT {playernums_str} FROM mine_status WHERE id={1};"
       cursor.execute(stmt)
       playernums = cursor.fetchall()
       conn.commit()
