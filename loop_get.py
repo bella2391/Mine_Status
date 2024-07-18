@@ -31,19 +31,9 @@ while True:
       online = ""
       online += "オンラインサーバー:\n"
       offline = "オフラインサーバー:\n"
-      servers.append(dict(name="Bungeecord",port=os.getenv("Bungeecord_SERVER_PORT")))
-      #servers.append(dict(name="Velocity",port=os.getenv("Velocity_SERVER_PORT")))
-      servers.append(dict(name="Home",port=os.getenv("Home_SERVER_PORT")))
-      servers.append(dict(name="Latest",port=os.getenv("Latest_SERVER_PORT")))
-      servers.append(dict(name="La_Test",port=os.getenv("La_Test_SERVER_PORT")))
-      servers.append(dict(name="RLCraft",port=os.getenv("RLCraft_SERVER_PORT")))
-      servers.append(dict(name="Gun",port=os.getenv("Gun_SERVER_PORT")))
-      servers.append(dict(name="Multi_Isekai",port=os.getenv("Multi_Isekai_SERVER_PORT")))
-      servers.append(dict(name="DungeonF",port=os.getenv("DungeonF_SERVER_PORT")))
-      servers.append(dict(name="Vanilla",port=os.getenv("Vanilla_SERVER_PORT")))
-      servers.append(dict(name="La_Test2",port=os.getenv("La_Test2_SERVER_PORT")))
-      servers.append(dict(name="HardCore",port=os.getenv("HardCore_SERVER_PORT")))
-
+      servers.append(dict(name="Server1",port=os.getenv("Server1_SERVER_PORT")))
+      servers.append(dict(name="Server2",port=os.getenv("Server2_SERVER_PORT")))
+      
       stmt=f"SHOW COLUMNS FROM mine_status;"
       cursor.execute(stmt)
       columns = cursor.fetchall()
