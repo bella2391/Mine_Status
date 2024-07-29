@@ -1,5 +1,4 @@
 # Mine_Status
->## Freely to edit!
 ## This enable us what?
 >- ### To get minecraft status like on/off status, how many logining players, such a player name and so on<br>
 >- ### To manage those of info in mysql server<br>
